@@ -4,17 +4,20 @@ echo Updating script...
 echo.
 
 set backupPath=zip\
-set scriptPath=..\cheat\ ..\cheat2\
+set scriptPath=..\Cheat\
 
 md temp
 powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri https://github.com/SilentHit/Salien-Cheat/archive/master.zip -OutFile temp\Salien-Cheat-master.zip"
 powershell -Command "Expand-Archive -LiteralPath temp\Salien-Cheat-master.zip -DestinationPath temp\ -Force"
 
-for %%p in (%scriptPath%) do (
-	for %%i in (%%p*) do (if not %%i == %%ptoken.txt del %%i)
-	copy temp\Salien-Cheat-master\* %%p >nul
-	echo Folder %%p updated
+for %%i in (%scriptPath%*) do (
+	if not %%i == %scriptPath%token.txt (
+		del %%i
+	)
 )
+
+copy temp\Salien-Cheat-master\* %scriptPath% >nul
+echo Folder %scriptPath% updated
 
 if not exist "%backupPath%" (
 	md %backupPath%
