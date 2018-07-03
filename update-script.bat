@@ -7,7 +7,7 @@ set backupPath=zip\
 set scriptPath=Salien-Cheat\ Salien-Cheat2\
 
 md temp
-powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri https://github.com/SteamDatabase/SalienCheat/archive/master.zip -OutFile temp\SalienCheat-master.zip"
+powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri https://github.com/SilentHit/Salien-Cheat/archive/master.zip -OutFile temp\SalienCheat-master.zip"
 powershell -Command "Expand-Archive -LiteralPath temp\SalienCheat-master.zip -DestinationPath temp\ -Force"
 
 for %%p in (%scriptPath%) do (
