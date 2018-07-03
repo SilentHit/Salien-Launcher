@@ -4,7 +4,7 @@ echo Updating script...
 echo.
 
 set backupPath=zip\
-set scriptPath=..\Cheat\
+set scriptPath=..\cheat\
 
 md temp
 powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri https://github.com/SilentHit/Salien-Cheat/archive/master.zip -OutFile temp\Salien-Cheat-master.zip"

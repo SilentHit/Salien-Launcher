@@ -2,5 +2,5 @@
 call start-config.bat
 title Template
 
-..\php\php.exe -f ..\Cheat\cheat.php ..\token\tokenTemplate.txt
+..\cheat\php\php.exe -f ..\cheat\cheat.php ..\token\tokenTemplate.txt
 pause
