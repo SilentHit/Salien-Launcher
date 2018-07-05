@@ -1,5 +1,5 @@
 # Salien-Launcher
-Salien minigame launcher and updater for https://github.com/SilentHit/Salien-Cheat
+Salien minigame windows launcher and updater for https://github.com/SilentHit/Salien-Cheat
 
 ## Start-All.bat
 Start all instance (have to add your instance)
